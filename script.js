@@ -57,11 +57,13 @@ function checkWord(){
         `;
         repsonse.style.display = `block`;
         repsonse.classList.add("yes");
+        repsonse.classList.remove("no");
     }else{
         repsonse.innerHTML = `
             No, <span class="checkedWord">${trimmedUserWord}</span> or <span class="reversedWord">${trimmedReversedWord}</span> is not a palindrome!
         `;
         repsonse.style.display = `block`;
+        repsonse.classList.remove("yes");
         repsonse.classList.add("no");
     }
 }
